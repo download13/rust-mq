@@ -11,7 +11,11 @@ log = "0.3"
 rand = "0.3"
 byteorder = "0.4"
 mqtt3 = "0.1" # { path = "../mqtt3" }
-netopt = "0.1" # { path = "../netopt" }
+netopt = {version = "0.1", default-features = false} # { path = "../netopt" }
 
 [dev-dependencies]
 env_logger = "0.3"
+
+[features]
+default = ["ssl"]
+ssl = ["netopt/ssl"]
