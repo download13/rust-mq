@@ -11,10 +11,16 @@ log = "0.3"
 rand = "0.3"
 byteorder = "0.4"
 mqtt3 = "0.1.3" # { path = "../mqtt3" }
-netopt = {version = "0.1", git = "https://github.com/download13/rust-mq", rev = "80411122ffdb9d1f14394cfdde946e625efe1f2b", default-features = false} # { path = "../netopt" }
 
 [dev-dependencies]
 env_logger = "0.3"
+
+[dependencies.netopt]
+version = "0.1"
+git = "https://github.com/download13/rust-mq"
+rev = "cbca9ed832d5282f77a61a7700361bdb5ea8143c"
+default-features = false
+# path = "../netopt"
 
 [features]
 default = ["ssl"]
