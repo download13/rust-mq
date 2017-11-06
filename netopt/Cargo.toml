@@ -6,10 +6,16 @@ description = "Provides options to work with tcp or ssl streams and has a choice
 repository = "https://github.com/inre/rust-mq"
 license = "MIT"
 
+[dependencies.mqtt3]
+path = "../mqtt3"
+#git = "https://github.com/download13/rust-mq"
+#rev = "9c07233b7eb78d4b287c8cde3d1d42afee93929e"
+
+[dependencies.openssl]
+version = "0.7"
+optional = true
+features = ["tlsv1_1", "tlsv1_2"]
+
 [features]
 default = ["ssl"]
 ssl = ["openssl"]
-
-[dependencies]
-openssl = { version = "0.7", optional = true, features = ["tlsv1_1", "tlsv1_2"] }
-mqtt3 = "0.1" # { path = "../mqtt3" }

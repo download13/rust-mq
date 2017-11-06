@@ -10,17 +10,20 @@ license = "MIT"
 log = "0.3"
 rand = "0.3"
 byteorder = "0.4"
-mqtt3 = "0.1.3" # { path = "../mqtt3" }
 
 [dev-dependencies]
 env_logger = "0.3"
 
+[dependencies.mqtt3]
+path = "../mqtt3"
+#git = "https://github.com/download13/rust-mq"
+#rev = "9c07233b7eb78d4b287c8cde3d1d42afee93929e"
+
 [dependencies.netopt]
-version = "0.1"
-git = "https://github.com/download13/rust-mq"
-rev = "cbca9ed832d5282f77a61a7700361bdb5ea8143c"
+#git = "https://github.com/download13/rust-mq"
+#rev = "cbca9ed832d5282f77a61a7700361bdb5ea8143c"
 default-features = false
-# path = "../netopt"
+path = "../netopt"
 
 [features]
 default = ["ssl"]
