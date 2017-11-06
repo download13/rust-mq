@@ -43,16 +43,8 @@ pub mod ssl {
         pub fn accept(&self, _: TcpStream) -> Result<SslStream, io::Error> {
             panic!("ssl disabled");
         }
-        
-        pub fn connect(&self, stream: TcpStream) -> Result<SslStream, io::Error> {
-            panic!("ssl disabled");
-        }
-        
-        pub fn try_clone(&self) -> Result<SslStream> {
-            panic!("ssl disabled");
-        }
-        
-        pub fn get_ref(&self) -> &T {
+
+        pub fn connect(&self, _: TcpStream) -> Result<SslStream, io::Error> {
             panic!("ssl disabled");
         }
     }
